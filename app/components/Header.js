@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-100 shadow-lg p-1">
+    <Disclosure as="nav" className="bg-gray-100 shadow-md p-1">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

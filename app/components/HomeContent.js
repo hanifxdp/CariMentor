@@ -1,51 +1,34 @@
 export default function Example() {
-    return (
-      <div className="relative bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block xl:inline">Data to enrich your</span>{" "}
-                  <span className="block text-indigo-600 xl:inline">
-                    online business
-                  </span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                  lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                  fugiat aliqua.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                    >
-                      Get started
-                    </a>
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                    >
-                      Live demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </main>
+  return (
+    <div className="relative bg-white lg:overflow-y-hidden">
+      <div className="flex justify-center flex-col items-center">
+        <img className=" w-auto" src="/bg.png" alt="Workflow" />
+        <div className="flex absolute z-10 justify-items-center flex-col">
+          <h1 className="font-mono text-center text-white text-7xl">
+            Find your Mentor here!
+          </h1>
+          <div class="flex my-2 w-auto">
+            <input
+              type="search"
+              class="bg-white h-16 px-5 pr-16 rounded-full text-md focus:outline-none w-full"
+              placeholder="Search by name..."
+            />
+            <div class="absolute right-0 p-5">
+              <button className="focus:outline-none">
+                <svg
+                  class=" h-6 w-6 fill-current text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 56.966 56.966"
+                  width="512"
+                  height="512"
+                >
+                  <path d="M55.146 51.887L41.588 37.786c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837 1.192-1.147 1.23-3.049.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-            alt=""
-          />
-        </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

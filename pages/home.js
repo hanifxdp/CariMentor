@@ -3,7 +3,7 @@ import HomeContent from "../app/components/HomeContent";
 
 const home = () => {
   return (
-    <div>
+    <div className="lg:overflow-y-hidden">
       <Header />
       <HomeContent />
     </div>
