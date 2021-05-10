@@ -1,7 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
+import Link from "next/link";
 
-const navigation = [{ name: "About", href: "#", current: true }];
+const navigation = [{ name: "About", href: "/about", current: true }];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
