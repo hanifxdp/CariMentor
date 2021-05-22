@@ -15,19 +15,21 @@ export default function Header() {
           <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="flex items-center flex-1 sm:items-stretch sm:justify-between">
-                <div className="flex items-center flex-shrink-0" href="/">
-                  {/* mobile */}
-                  <img
-                    className="block w-auto h-8 lg:hidden"
-                    src="/mobie.png"
-                    alt="Workflow"
-                  />
-                  {/* web */}
-                  <img
-                    className="hidden lg:block h-18 w-28"
-                    src="/web.png"
-                    alt="Workflow"
-                  />
+                <div className="flex items-center flex-shrink-0">
+                  <a href="/">
+                    {/* mobile */}
+                    <img
+                      className="block w-auto h-8 lg:hidden"
+                      src="/mobie.png"
+                      alt="Workflow"
+                    />
+                    {/* web */}
+                    <img
+                      className="hidden lg:block h-18 w-28"
+                      src="/web.png"
+                      alt="Workflow"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
