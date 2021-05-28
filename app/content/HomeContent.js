@@ -18,14 +18,14 @@ export default function Example() {
             <input
               type="search"
               class="bg-white h-16 px-5 pr-16 rounded-full text-md focus:outline-none w-full"
-              placeholder="Search by name..."
+              placeholder="Search here..."
               onChange={(e) => setName(e.target.value)}
             />
             <div class="absolute right-0 p-5">
               <Link
                 href={{
                   pathname: "/results",
-                  query: { name: name },
+                  query: { category: name , name: name},
                 }}
               >
                 <button className="focus:outline-none" onClick={onContinue}>
