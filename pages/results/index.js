@@ -14,12 +14,12 @@ export const getStaticProps = async () => {
 
 const getData = async (category, name) => {};
 
-const Results = () => {
+const Results = ({ mentor }) => {
   const [newData, setNewData] = useState([]);
   const router = useRouter();
   console.log(router.query);
   const data = router.query.category;
-  const data2 = router.query.name
+  const data2 = router.query.name;
 
   useEffect(async () => {
     const defaultEndpoint = `https://carimentor.herokuapp.com/api/carimentor/?category=${data}&?name=${data2}`;
@@ -72,7 +72,7 @@ const Results = () => {
         <div>
           <h1 className="mt-6 mb-12 text-2xl font-black">More Mentor</h1>
         </div>
-        {/* <div className="grid grid-cols-2 gap-8 px-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 px-2 md:grid-cols-4">
           {mentor.data.map((result) => {
             const { id, name, img, desc, category, link } = result;
             const passData = result;
@@ -102,7 +102,7 @@ const Results = () => {
               </Link>
             );
           })}
-        </div> */}
+        </div>
       </div>
     </>
   );

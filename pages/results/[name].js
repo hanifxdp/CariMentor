@@ -14,7 +14,7 @@ const Details = ({ result }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className="grid grid-cols-1 gap-0 mx-auto my-24 max-w-7xl sm:px-6 lg:px-8 sm:grid-cols-2">
+        <div className="grid gap-0 mx-auto my-24 max-w-7xl sm:px-6 lg:px-8 sm:grid-cols-2">
           <img
             src={newData.img}
             width={200}
@@ -25,9 +25,9 @@ const Details = ({ result }) => {
             <h1 className="my-2 text-2xl font-bold">{newData.name}</h1>
             <h1 className="my-2">{newData.desc}</h1>
             <h1 className="my-2">{newData.category}</h1>
-            <div className="px-5 py-5">
-              <button className="px-2 my-2 bg-green-500 rounded-2xl">
-                <a href={newData.link} className="text-white">
+            <div className="py-5 ">
+              <button className="my-2 bg-green-500 rounded-2xl">
+                <a href={newData.link} className="mx-10 text-white">
                   Profile
                 </a>
               </button>
