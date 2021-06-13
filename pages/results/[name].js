@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 
 const Details = ({ result }) => {
   const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   const data = router.query.payload;
   const newData = JSON.parse(data);
   console.log("isi new data :", newData);

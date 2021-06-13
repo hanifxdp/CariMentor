@@ -9,6 +9,7 @@ export async function getStaticProps() {
 
   return {
     props: { mentor: data },
+    fallback: false,
   };
 }
 
