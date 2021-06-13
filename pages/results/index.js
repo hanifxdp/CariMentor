@@ -28,6 +28,11 @@ const Results = ({ mentor }) => {
     const data1 = await res.json();
     await setNewData(data1.data);
     console.log(`isidata`, data1.data);
+    if (!data1) {
+      return {
+        notFound: true,
+      };
+    }
   }, []);
 
   return (

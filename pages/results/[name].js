@@ -9,6 +9,11 @@ const Details = ({ result }) => {
   const data = router.query.payload;
   const newData = JSON.parse(data);
   console.log("isi new data :", newData);
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
   return (
     <>
       <Head>
