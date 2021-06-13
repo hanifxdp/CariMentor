@@ -3,14 +3,15 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch("https://carimentor.herokuapp.com/api/carimentor");
   const data = await res.json();
 
   return {
     props: { mentor: data },
+    fallback: false,
   };
-};
+}
 
 const getData = async (category, name) => {};
 
@@ -27,6 +28,11 @@ const Results = ({ mentor }) => {
     const data1 = await res.json();
     await setNewData(data1.data);
     console.log(`isidata`, data1.data);
+    if (!data1) {
+      return {
+        notFound: true,
+      };
+    }
   }, []);
 
   return (
@@ -68,11 +74,12 @@ const Results = ({ mentor }) => {
               </Link>
             );
           })}
+          {}
         </div>
-        <div>
+        {/* <div>
           <h1 className="mt-6 mb-12 text-2xl font-black">More Mentor</h1>
-        </div>
-        <div className="grid grid-cols-2 gap-8 px-2 md:grid-cols-4">
+        </div> */}
+        {/* <div className="grid grid-cols-2 gap-8 px-2 md:grid-cols-4">
           {mentor.data.map((result) => {
             const { id, name, img, desc, category, link } = result;
             const passData = result;
@@ -102,7 +109,7 @@ const Results = ({ mentor }) => {
               </Link>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </>
   );
